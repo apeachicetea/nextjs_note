@@ -8,3 +8,10 @@ export default function Pants({ params }: Props) {
   const { slug } = params;
   return <h1>{`${slug} Page!`}</h1>;
 }
+
+export function generateStaticParams() {
+  const products = ["pants", "skirt"];
+  return products.map((product) => {
+    slug: product;
+  });
+}
