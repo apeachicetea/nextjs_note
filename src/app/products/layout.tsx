@@ -11,7 +11,7 @@ export default function ProdutsLayout({
     <section>
       {/* Include shared UI here e.g. a header or sidebar */}
       {products.map((el) => (
-        <Link href={`/products/${el}`}>
+        <Link href={`/products/${el}`} key={el}>
           <nav>{el}</nav>
         </Link>
       ))}
