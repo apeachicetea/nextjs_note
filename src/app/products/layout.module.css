@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: start;
+  padding: 10px 0px;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+.header nav {
+  padding: 0px 0px 0px 30px;
+}
+
+.section {
+  padding: 10px 30px;
+}
