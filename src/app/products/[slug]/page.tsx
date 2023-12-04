@@ -1,3 +1,4 @@
+import MeowArticle from "@/components/MeowArticle";
 import { getProduct, getProducts } from "@/service/products";
 import { notFound } from "next/navigation";
 
@@ -17,11 +18,6 @@ export function generateMetadata({ params }: Props) {
 
 export default async function Pants({ params: { slug } }: Props) {
   const productName = await getProduct(slug);
-  const res = await fetch("https://meowfacts.herokuapp.com", {
-    next: { revalidate: 2 },
-  });
-  const data = await res.json();
-  const factText = data.data[0];
 
   if (!productName) {
     notFound();
@@ -36,7 +32,7 @@ export default async function Pants({ params: { slug } }: Props) {
         libero quo, in sapiente, illo debitis, a laudantium error aspernatur.
         Autem, temporibus?
       </div>
-      <article>{factText}</article>
+      <MeowArticle />
     </>
   );
 }
