@@ -3,6 +3,8 @@ import styles from "./layout.module.css";
 import { Metadata } from "next";
 import { getProducts } from "@/service/products";
 
+// export const revalidate = 3;
+
 export const metadata: Metadata = {
   title: "멋진 제품 사이트 | 전체 제품 확인",
   description: "멋진 제품을 판매하는 곳입니다.",
