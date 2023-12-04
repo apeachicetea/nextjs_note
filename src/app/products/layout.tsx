@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./layout.module.css";
 import { Metadata } from "next";
+import { getProducts } from "@/service/products";
 
 export const metadata: Metadata = {
   title: "멋진 제품 사이트 | 전체 제품 확인",
@@ -12,7 +13,8 @@ export default function ProdutsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const products = ["skirt", "pants", "slipper"];
+  // 서버 파일(데이터베이스)에 있는 제품의 리스트를 읽어와서, 그걸 보여줌
+  const products = getProducts();
 
   return (
     <>
